@@ -1,8 +1,10 @@
 import Card from '@/components/card';
 import data from '@/constants/data';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
-import React from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { ScrollView, StyleSheet, Text, TextInput, View, } from 'react-native';
+import { isLive } from '../../constants/api';
+
 const index = () => {
 
   const renderData = () => {
@@ -10,6 +12,15 @@ const index = () => {
       <Card {...item} />
     )
   }
+const server_check = async () => {
+  const live = await isLive()
+  console.log(live);
+  
+}
+useEffect(() => {
+  
+}, [])
+
   return (
     <View style={styles.container}>
       <Text style={styles.resname}>
