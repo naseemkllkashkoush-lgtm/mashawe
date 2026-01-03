@@ -12,14 +12,15 @@ const index = () => {
       <Card {...item} />
     )
   }
-const server_check = async () => {
-  const live = await isLive()
-  console.log(live);
   
-}
-useEffect(() => {
-  
-}, [])
+  const server_check = async () => {
+    const live = await isLive()
+    console.log(live);
+  }
+
+  useEffect(() => {
+    server_check()
+  }, [])
 
   return (
     <View style={styles.container}>
@@ -31,7 +32,7 @@ useEffect(() => {
         <EvilIcons style={styles.searchIcon} name="search" size={20} color="black" />
 
         <TextInput style={styles.txt}
-        placeholder='search...'
+          placeholder='search...'
         />
       </View>
       <ScrollView>
@@ -108,13 +109,13 @@ const styles = StyleSheet.create({
   },
   resname: {
     alignSelf: "center",
-    fontSize:30,
-    color:"#fffdfdff",
-    borderWidth:2,
-borderColor:"#444444ff",
-backgroundColor:"#5a5959ff",
-margin:5,
-borderRadius:5
+    fontSize: 30,
+    color: "#fffdfdff",
+    borderWidth: 2,
+    borderColor: "#444444ff",
+    backgroundColor: "#5a5959ff",
+    margin: 5,
+    borderRadius: 5
 
   }
 

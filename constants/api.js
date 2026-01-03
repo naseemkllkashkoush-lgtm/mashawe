@@ -1,4 +1,4 @@
-export const baseUrl = "http://192.168.68.120:9999";
+export const baseUrl = "https://game-server-s4eq.onrender.com";
 
 export const fetchApi = async (route, method = 'GET', body = null) => {
     try {
